@@ -1598,7 +1598,9 @@ a.active {
 .portfolio_item {
     position: relative;
     margin: 10px 0;
-
+}
+.portfolio_item img{
+  box-shadow: 8px 8px #42bcc3;
 }
 
 .img-responsive {
