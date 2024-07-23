@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
 	<link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -103,8 +103,8 @@
     <div class="section" id="about">
         <div class="container">
             <div class="col-md-6" data-aos="fade-up">
-                <h4>01</h4>
-                <h1 class="size-50">Know <br /> About me</h1>
+                <h4 class="orange">01</h4>
+                <h1 class="size-50 orange">Know <br /> About me</h1>
                 <div class="h">
                     <span>Name.</span> 오지영
                     <br><span>Mobile.</span> 010. 5022. 1306
@@ -119,9 +119,14 @@
                 </div>
             </div>
             <div class="col-md-6 about-img-div">
-                <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
-                <img src="img/about-img.jpg" width="400" class="img-responsive" alt="" align="right"
-                    data-aos="fade-right" data-aos-delay="0" />
+                  <div class="slider">
+                    <div class="containerP">
+                      <div class="slide x"></div>
+                      <div class="slide y"></div>
+                      <div class="slide z"></div>
+                    </div>
+                    <div class="shadow"></div>
+                  </div>
             </div>
         </div>
     </div>
@@ -131,8 +136,8 @@
     <div class="section" id="projects">
         <div class="container">
             <div class="col-md-12">
-                <h4>02</h4>
-                <h1 class="size-50">My <br /> Projects</h1>
+                <h4 class="blue">02</h4>
+                <h1 class="size-50 blue">My <br /> Projects</h1>
             </div>
             <!-- main container -->
             <div class="main-container portfolio-inner clearfix">
@@ -145,9 +150,6 @@
                                 <ul class="portfolio_filter">
                                     <li><a href="" class="active" data-filter="*">All</a></li>
                                     <li><a href="" data-filter=".Tium">해랑종합병원</a></li>
-                                    <li><a href="" data-filter=".Philos">brand2</a></li>
-                                    <li><a href="" data-filter=".graphics">Graphics</a></li>
-
                                 </ul>
                             </nav>
                         </div>
@@ -176,8 +178,12 @@
                                                     <p><a href="https://oh-ji-young.github.io/Herang-General-Hospital/" target="_blank">https://oh-ji-young.github.io/Herang-General-Hospital/</a></p>
                                                     <!--a태그의 #대신 브랜드1 주소 넣어주세요-->
                                                     <div class="project_btn_box">
-                                                        <a href="#" class="project_btn" target="_blank">BI&amp;BX</a>
-                                                        <a href="#" class="project_btn" target="_blank">Web</a>
+                                                        <a href="./Guide/BI/BI.html" class="project_btn" target="_blank">BI Guide</a>
+                                                        <a href="./Guide/WEB/WEB.html" class="project_btn" target="_blank">Web Guide</a>
+                                                        <a href="https://oh-ji-young.github.io/herang/" class="project_btn" target="_blank">BX E-book</a>
+                                                        <a href="./Guide/RWD/RWD.html" class="project_btn" target="_blank">RWD Guide</a>
+                                                        <a href="./video/video 1/video1.html" class="project_btn" target="_blank">video1</a>
+                                                        <a href="./video/video 2/video2.html" class="project_btn" target="_blank">video2</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -187,40 +193,6 @@
 
                                 <!-- end single work -->
                             </div>
-
-                            <div class="col-md-12 Philos">
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 photography">
-                                    <div class="portfolio_item"> <img src="img/portfolio/03.jpg" alt="image"
-                                            class="img-responsive" />
-
-                                    </div>
-                                </div>
-                                <!-- end single work -->
-
-                                <!-- single work -->
-                                <div class="col-md-4 col-sm-6 fashion ads">
-                                    <div class="portfolio_item">
-                                        <div class="portfolio_item">
-                                            <div class="portfolio-border clearfix">
-                                                <div class="item_info">
-                                                    <h3>brand2</h3>
-                                                    <p>brand2 분야</p>
-                                                    <p><a href="#"
-                                                            target="_blank">http://dothome.co.kr</a><!--a태그안의 #대신에 브랜드2 주소 넣어주세요-->
-                                                    </p>
-                                                    <div class="project_btn_box">
-                                                        <a href="#" class="project_btn" target="_blank">BI&amp;BX</a>
-                                                        <a href="#" class="project_btn" target="_blank">Web</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end single work -->
-                            </div>
-
                         </div>
                         <!-- end portfolio_container -->
                     </div>
@@ -237,14 +209,14 @@
     <div class="section" id="experience">
         <div class="container">
             <div class="col-md-4">
-                <h4>03</h4>
-                <h1 class="size-50">My <br /> Experience</h1>
+                <h4 class="yellow">03</h4>
+                <h1 class="size-50 yellow">My <br /> Experience</h1>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-8">
                 <ul class="timeline">
                     <li class="timeline-event" data-aos="fade-up">
-                        <label class="timeline-event-icon"></label>
+                        <label class="timeline-event-icon"><img src="./img/Untitled-1.png" alt=""></label>
                         <div class="timeline-event-copy">
                             <p class="timeline-event-thumbnail">2014.03 ~ 2018.02
                             </p>
@@ -254,7 +226,7 @@
                         </div>
                     </li>
                     <li class="timeline-event" data-aos="fade-up">
-                        <label class="timeline-event-icon"></label>
+                        <label class="timeline-event-icon"><img src="./img/Untitled-1.png" alt=""></label>
                         <div class="timeline-event-copy">
                             <p class="timeline-event-thumbnail">2020.01 ~ 2022.08</p>
                             <h3>김은영 내과 의원</h3>
@@ -262,7 +234,7 @@
                         </div>
                     </li>
                     <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                        <label class="timeline-event-icon"></label>
+                        <label class="timeline-event-icon"><img src="./img/Untitled-1.png" alt=""></label>
                         <div class="timeline-event-copy">
                             <p class="timeline-event-thumbnail">2024.03 ~ 2024. 07</p>
                             <h3>나래디자인학원 강의 수료</h3>
@@ -272,13 +244,13 @@
                     </ul><!--timeline-->
             </div>
             <div class="col-md-4">
-                <h1 class="size-50 license">License</h1>
+                <h1 class="size-50 license yellow">License</h1>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-8">
                 <ul class="timeline">
                     <li class="timeline-event" data-aos="fade-up">
-                        <label class="timeline-event-icon"></label>
+                        <label class="timeline-event-icon"><img src="./img/Untitled-1.png" alt=""></label>
                         <div class="timeline-event-copy">
                             <p class="timeline-event-thumbnail">2024.04
                             </p>
@@ -295,26 +267,26 @@
         <div class="container">
             <div class="col-md-" data-aos="fade-up">
                 <h4>04</h4>
-                <h1 class="size-50">Skills</h1>
+                <h1 class="size-50 white">Skills</h1>
                 <div class="h-50"></div>
                 <div class="skill-box">
 
                     <div class="skills-circle">
 
                         <ul>
-                            <li data-percent="70"><span class="text">Ps</span><span
+                            <li data-percent="75"><span class="text">Ps</span><span
                                     class="bar-circle-right"></span><span class="bar-circle-left"></span><span
                                     class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="70"><span class="text">Ai</span><span
+                            <li data-percent="73"><span class="text">Ai</span><span
                                     class="bar-circle-right"></span><span class="bar-circle-left"></span><span
                                     class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="65"><span class="text">Web</span><span
+                            <li data-percent="70"><span class="text">Web</span><span
                                     class="bar-circle-right"></span><span class="bar-circle-left"></span><span
                                     class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="70"><span class="text">Pr</span><span
+                            <li data-percent="80"><span class="text">Pr</span><span
                                     class="bar-circle-right"></span><span class="bar-circle-left"></span><span
                                     class="bar-circle-cover"></span><b></b></li>
-                            <li data-percent="70"><span class="text">Ae</span><span
+                            <li data-percent="82"><span class="text">Ae</span><span
                                     class="bar-circle-right"></span><span class="bar-circle-left"></span><span
                                     class="bar-circle-cover"></span><b></b></li>
 
