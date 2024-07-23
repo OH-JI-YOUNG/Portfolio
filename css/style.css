@@ -104,10 +104,10 @@ body {
   background-color: #ff4720;
 }
 .blue{
-    color: #425bb5;
+    color: #42bcc3;
 }
 .blue::before{
-  background-color: #425bb5;
+  background-color: #42bcc3;
 }
 .yellow{
     color: #f86f03;
@@ -1556,7 +1556,7 @@ a.active {
 
 #projects {
     padding: 50px 0 120px;
-    background: #B0DEFF;
+    background: #d2f7f3;
 }
 
 .portfolio .categories-grid span {
@@ -1585,7 +1585,7 @@ a.active {
 }
 
 .portfolio .categories-grid .categories ul li a.active {
-    background-color: #425BB5;
+    background-color: #42bcc3;
     padding: 0px 20px;
     color: white;
     text-decoration: none;
@@ -1984,15 +1984,15 @@ fieldset {
 .project_btn {
     display: inline-block;
     padding: 5px 20px;
-    border: 1px solid #425bb5;
+    border: 1px solid #42bcc3;
     border-radius: 30px;
-    color: #425bb5;
+    color: #2a7d81;
     margin-top: 10px;
 }
 
 .project_btn:hover {
     color: #fff;
-    background: #425bb5;
+    background: #42bcc3;
 }
 
 .project_btn_box {
