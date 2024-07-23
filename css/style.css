@@ -335,12 +335,13 @@ a.active {
     background: url(../img/background/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
+    background-position: center;
+    height: 100vh;
     display:flex;
     text-align: left;
     flex-direction:column;
     justify-content:center;
-
+    overflow: hidden;
     position: relative;
   }
   @import url(https://fonts.googleapis.com/css?family=Rammetto+One);
@@ -1458,7 +1459,8 @@ a.active {
     background:url(../img/background/background2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px;
+    background-position: center;
+    padding: 50px 0;
 }
 
 .skill-box {
@@ -2045,7 +2047,7 @@ fieldset {
     }
     .main{
         scale: 0.8;
-        right: 0%;}
+        right: 3%;}
     }    
 
 /*mobile*/
@@ -2061,7 +2063,7 @@ fieldset {
     }
     .main{
         scale: 0.7;
-        right: 0%;}
+        right: 3%;}
     } 
 @media(max-width:600px){
     .main{
