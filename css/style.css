@@ -97,7 +97,27 @@ body {
     font-size: 50px;
     line-height: 50px
 }
-
+.orange{
+    color: #ff4720;
+}
+.orange::before{
+  background-color: #ff4720;
+}
+.blue{
+    color: #425bb5;
+}
+.blue::before{
+  background-color: #425bb5;
+}
+.yellow{
+    color: #f86f03;
+}
+.yellow::before{
+  background-color: #f86f03;
+}
+.white{
+    color:white
+}
 .h-50 {
     height: 50px;
 }
@@ -279,7 +299,7 @@ nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -298,12 +318,12 @@ a:focus {
 }
 
 a:hover {
-    color: #F86F03;
+    color: #53d1dd;
     text-decoration: none;
 }
 
 a.active {
-    color: #F86F03;
+    color: #53d1dd;
 }
 
 
@@ -312,12 +332,15 @@ a.active {
 
 /*my header*/
 #header{
+    background: url(../img/background/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 900px;
     display:flex;
     text-align: left;
     flex-direction:column;
     justify-content:center;
-    background:#FFC5A1;
+
     position: relative;
   }
   @import url(https://fonts.googleapis.com/css?family=Rammetto+One);
@@ -1100,28 +1123,172 @@ a.active {
 #about {
     padding: 100px 0;
     background-color: #FFD19A;
+    overflow: hidden;
 }
 
 #about span {
     color: #707070;
     font-weight: 600;
 }
-
-.about-img-div img {
-    margin: 0 auto;
-
+#about .container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    -webkit-perspective: 600px;
+    perspective: 600px;
+    padding-left: 10%
 }
 
-.about-border {
+.slider * {
+    -webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
+    transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
+}
+
+.containerP {
+    width: inherit;
+    height: inherit;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+    transform: rotateY(0deg) rotateX(0deg);
+}
+
+.slide, .slide:after, .slide:before {
+    display: block;
+    width: inherit;
+    height: inherit;
+    background: url('https://cdn.dribbble.com/users/5031/screenshots/7008431/dribbble.png');
     position: absolute;
-    border: 10px solid rgba(153, 107, 187, 0.4);
-    width: 400px;
-    height: 400px;
-    top: 40px;
-    left: 50px;
-    z-index: 1
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background-size: cover;
+    background-position: center;
 }
 
+.slide.x {
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+} 
+
+.slide.x:after {
+    content: '';
+    background-image: url('https://cdn.dribbble.com/users/730703/screenshots/6988911/elenidebo-thisiscolossal-theroad-forchicagodesignmuseum.jpg');
+    -webkit-transform: translateZ(175px) rotateZ(-90deg);
+    transform: translateZ(175px) rotateZ(-90deg);
+}
+
+.slide.x:before {
+    content: '';
+    background-image: url('https://cdn.dribbble.com/users/329207/screenshots/6220354/bemocs_geneseo_sailing.jpg');
+    -webkit-transform: translateZ(-175px) rotateZ(-90deg);
+    transform: translateZ(-175px) rotateZ(-90deg);
+}
+
+.slide.y {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+} 
+
+.slide.y:after {
+    content: '';
+    background-image: url('https://cdn.dribbble.com/users/63407/screenshots/5705689/dribbble_moonlight_2x.png');
+    -webkit-transform: translateZ(175px) scale(-1);
+    transform: translateZ(175px) scale(-1);
+}
+
+.slide.y:before {
+    content: '';
+    background-image: url('https://cdn.dribbble.com/users/1355613/screenshots/6441984/landscape_2x.jpg');
+    -webkit-transform: translateZ(-175px);
+    transform: translateZ(-175px);
+}
+
+.slide.z {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+} 
+
+.slide.z:after {
+    content: '';
+    background-image: url('https://cdn.dribbble.com/users/3178178/screenshots/7013817/the_caravan_by_patryk_wojciechowicz_2x.png');
+    -webkit-transform: translateZ(175px);
+    transform: translateZ(175px);
+}
+
+.slide.z:before {
+    content: '';
+    background-image: url('https://cdn.dribbble.com/users/1361661/screenshots/6673317/music_girl.png');
+    -webkit-transform: translateZ(-175px);
+    transform: translateZ(-175px);
+}
+
+.containerP {
+    -webkit-animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+    animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+}
+
+@-webkit-keyframes rotate {
+    0%, 10% {-webkit-transform: rotateY(0deg) rotateX(0deg);transform: rotateY(0deg) rotateX(0deg);}
+    15%, 20% {-webkit-transform: rotateY(180deg) rotateX(0deg);transform: rotateY(180deg) rotateX(0deg);}
+    25%, 35% {-webkit-transform: rotateY(180deg) rotateX(270deg);transform: rotateY(180deg) rotateX(270deg);}
+    40%, 50% {-webkit-transform: rotateY(180deg) rotateX(90deg);transform: rotateY(180deg) rotateX(90deg);}
+    55%, 65% {-webkit-transform: rotateY(-90deg) rotateX(90deg);transform: rotateY(-90deg) rotateX(90deg);}
+    70%, 80% {-webkit-transform: rotateY(90deg) rotateX(90deg);transform: rotateY(90deg) rotateX(90deg);}
+    90%, 95% {-webkit-transform: rotateY(0deg) rotateX(90deg);transform: rotateY(0deg) rotateX(90deg);}
+}
+
+@keyframes rotate {
+    0%, 10% {-webkit-transform: rotateY(0deg) rotateX(0deg);transform: rotateY(0deg) rotateX(0deg);}
+    15%, 20% {-webkit-transform: rotateY(180deg) rotateX(0deg);transform: rotateY(180deg) rotateX(0deg);}
+    25%, 35% {-webkit-transform: rotateY(180deg) rotateX(270deg);transform: rotateY(180deg) rotateX(270deg);}
+    40%, 50% {-webkit-transform: rotateY(180deg) rotateX(90deg);transform: rotateY(180deg) rotateX(90deg);}
+    55%, 65% {-webkit-transform: rotateY(-90deg) rotateX(90deg);transform: rotateY(-90deg) rotateX(90deg);}
+    70%, 80% {-webkit-transform: rotateY(90deg) rotateX(90deg);transform: rotateY(90deg) rotateX(90deg);}
+    90%, 95% {-webkit-transform: rotateY(0deg) rotateX(90deg);transform: rotateY(0deg) rotateX(90deg);}
+}
+
+.shadow {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: rgba(0,0,0,0.75);
+    position: absolute;
+    top: 60%;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    z-index: -1;
+    -webkit-filter: blur(20px);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="20" /></filter></svg>#filter');
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-animation: rotateShadow 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+    animation: rotateShadow 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+}
+
+@-webkit-keyframes rotateShadow {
+    0%, 10% {-webkit-transform: rotateY(0deg) rotateX(90deg);}  
+    15%, 20% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+    20.1%, 20.9% {-webkit-transform: rotateY(180deg) rotateX(90deg) translatez(5px);}
+    25%, 35% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+    35.1%, 35.9% {-webkit-transform: rotateY(180deg) rotateX(90deg) translatez(-5px);}
+    40%, 50% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+    55%, 65% {-webkit-transform: rotateY(0deg) rotateX(90deg);}
+    70%, 80% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+    90%, 99% {-webkit-transform: rotateY(90deg) rotateX(90deg);}
+    99.1%, 99.9% {-webkit-transform: rotateY(90deg) rotateX(90deg) translatez(-5px);}
+}
+
+  
+    
 .h {
     font-size: 16px;
     font-weight: 600;
@@ -1182,10 +1349,11 @@ a.active {
     padding-left: 0;
     list-style: none;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .timeline:before {
-    background-color: black;
     content: '';
     margin-left: -1px;
     position: absolute;
@@ -1244,10 +1412,8 @@ a.active {
     transition: -webkit-transform 0.2s ease-in;
     transition: transform 0.2s ease-in;
     transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background-color: #F86F03;
-    outline: 10px solid #f3f3f3;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     display: block;
     margin: 0.5em 0.5em 0.5em -0.5em;
     position: absolute;
@@ -1255,7 +1421,16 @@ a.active {
     left: 2em;
     width: 1em;
     height: 1em;
+    
 }
+
+.timeline-event-icon img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 
 .timeline-event-thumbnail {
     -moz-transition: box-shadow 0.5s ease-in 0.2s;
@@ -1280,7 +1455,9 @@ a.active {
 /* skill section
 ==================================================*/
 #skills {
-    background: ;
+    background:url(../img/background/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 50px;
 }
 
@@ -1359,8 +1536,8 @@ a.active {
 
 .skill-box>.skills-circle>ul>li>span.bar-circle-cover {
     display: block;
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: 90%;
     /*bar 굵기 두껍게 하고싶으면 여기 width랑 height랑 %줄이면됨*/
     border-radius: 50%;
     background-color: #fff;
@@ -1699,6 +1876,20 @@ fieldset {
     .portfolio .categories-grid .categories ul li a {
         padding: 0 2px;
     }
+    .slider{
+      scale: 0.7;
+      padding-top: 20px;
+      padding-left: 0px;
+    }
+    #about .container{
+      justify-content: center;
+    }
+}
+@media (max-width: 395px){
+  .slider{
+    padding-top: 0;
+    scale: 0.5;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1791,14 +1982,15 @@ fieldset {
 .project_btn {
     display: inline-block;
     padding: 5px 20px;
-    border: 1px solid skyblue;
+    border: 1px solid #425bb5;
     border-radius: 30px;
-    color: #23527c;
+    color: #425bb5;
+    margin-top: 10px;
 }
 
 .project_btn:hover {
     color: #fff;
-    background: skyblue;
+    background: #425bb5;
 }
 
 .project_btn_box {
